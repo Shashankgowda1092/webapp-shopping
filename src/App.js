@@ -4,23 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <h1 className='text-6xl font-bold underline text-red-500' >tailwindcss</h1>
-        <h1>shash and bhoom </h1>
-        <p>
-          lets build a app with react together #loveu
-        </p>
-        <h3>Okay </h3>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>HAPPIFY EVENYTS</h1>
     </div>
   );
 }
