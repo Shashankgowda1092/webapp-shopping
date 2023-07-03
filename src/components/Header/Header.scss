@@ -1,0 +1,93 @@
+@import "../../css-config/mixins.scss";
+
+.main-header{
+    width: 100%;
+    padding: 0 20px;
+    background-color: #212121;
+    color: white;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    z-index: 99;
+    @include md{
+        padding: 0 40px;
+    }
+    .header-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        max-width:1200px ;
+        margin:0 auto;
+        @include md{
+            height: 80px;
+        }
+        .left{
+            list-style-type: none;
+            display: none;
+            gap: 25px;
+            @include md{
+                display: flex;
+            }
+            li{
+                font-size: 14px;
+                font-weight: 600;
+                text-transform: uppercase;
+                cursor: pointer;
+            }
+        }
+        .center{
+            font-size: 24;
+            font-weight: 700;
+            cursor: pointer;
+            @include md{
+                font-size: 32px;
+                position: absolute;
+                left: 50%;
+                transform:translateX(-50%) ;
+            }
+        }
+        .right{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            @include md{
+                gap:25px;
+            }
+            .svg {
+                font-size: 24px;
+                cursor: pointer;
+                @include md {
+                  font-size: 32px;
+                }
+              }
+              
+              .cart-icon {
+                position: relative;
+                span {
+                  min-width: 20px;
+                  text-align: center;
+                  background-color: #6d0fbe;
+                  padding: 2.5px;
+                  position: absolute;
+                  top: -5px;
+                  right: -12px;
+                  font-size: 14px; /* Adjust the font-size to your desired size */
+                  line-height: 0.7;
+                  border-radius: 20px;
+                }
+              }
+              
+        }
+    }
+    &.sticky-header{
+        position: sticky;
+        top:0;
+        animation: stickyHeader 0.3s ease forwards;
+    }
+}
+
+@keyframes stickyHeader{
+    0% {transform: translateY(-80px);}
+    100% { transform: translateX(0);}
+}
