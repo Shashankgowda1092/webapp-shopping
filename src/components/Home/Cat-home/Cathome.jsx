@@ -1,31 +1,37 @@
 // import { useNavigate } from "react-router-dom";
 import './Cathome.scss';
-
-const Cathome = ({ categories,headingText }) => {
+import iban from "../../../assets/deco-banner.png"; 
+const Cathome = ({ categories }) => {
     // const navigate = useNavigate();
     return (
         <div className="shop-by-category">
             <div className="sec-heading">events</div>
             <div className="categories">
-                {/* {categories?.data?.map((item) => {
-                    console.log(item);
-                    return (
-                    <div
-                        key={item.id}
-                        className="category"
-                        onClick={() => navigate(`/category/${item.id}`)}
-                    >
-                        <img
-                            src={
-                            
-                                item.attributes.img.data.attributes.url
-                            }
-                        />
+                    <div className="category">
+                        <img src={iban} alt="banner" />
                     </div>
-                )})} */}
-            </div>
+                    <div className="category">
+                        <img src={iban} alt="banner" />
+                    </div>
+                    <div className="category">
+                        <img src={iban} alt="banner" />
+                    </div>
+                    <div className="category">
+                        <img src={iban} alt="banner" />
+                    </div>
+                </div>
         </div>
     );
 };
 
 export default Cathome;
+
+/*
+ key={item.id}
+                        className="category"
+                        onClick={() => navigate(`/category/${item.id}`)}
+
+
+
+
+*/
